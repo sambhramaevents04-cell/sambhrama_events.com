@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sambhrama Events</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: white;
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+        background-color: #000;
+    }
+    header img {
+        max-width: 200px;
+    }
+    nav {
+        background-color: #111;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+    nav a:hover {
+        color: red;
+    }
+    section {
+        padding: 40px;
+        text-align: center;
+    }
+    .services, .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .service-box, .gallery img {
+        background: #111;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 300px;
+        box-shadow: 0 0 10px red;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #111;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        border-top: 2px solid red;
+    }
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: red;
+    }
+</style>
+</head>
+<body>
+<header>
+<img alt="Sambhrama Events Logo" src="new-logo.jpg"/>
+</header>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+<section id="home">
+<h1>Welcome to Sambhrama Events</h1>
+<p>DJ Services &amp; Event Management with Style, Sound, and Energy</p>
+</section>
+<section id="about">
+<h2>About Us</h2>
+<p>We bring life to your celebrations with professional DJ services, event planning, lighting, sound, and decorations. From weddings to corporate events, we make every moment unforgettable.</p>
+<p>We provide complete marriage and all-function supplies, including DJ sound systems, LED lighting, focus lights, LED running sets, and generators — all available for rent. Whether it’s a wedding, party, or corporate event, we bring top-quality equipment and professional service to make your event unforgettable.</p>
+</section>
+<section id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="service-box">
+<h3>DJ Services</h3>
+<p>High-energy music for weddings, parties, clubs, and corporate events.</p>
+</div>
+<div class="service-box">
+<h3>Event Management</h3>
+<p>Complete event planning, stage setup, lighting, and decorations.</p>
+</div>
+<div class="service-box">
+<h3>Sound &amp; Lighting</h3>
+<p>Professional-grade sound systems and vibrant lighting effects.</p>
+</div>
+</div>
+</section>
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+<img alt="Event 1" src="images/gallery1.webp"/>
+<img alt="Event 2" src="images/gallery2.avif"/>
+<img alt="Event 3" src="images/gallery3.jpg"/>
+</div>
+</section>
+<section id="contact">
+<h2>Contact Us</h2>
+<p>📞 6362640092</p>
+<p>📍 Near Canara Bank, Anemahal, Sakaleshpura - 573134</p>
+<p><a href="tel:6362640092">Call Now</a> | <a href="https://maps.google.com/?q=Near+Canara+Bank,+Anemahal,+Sakaleshpura" target="_blank">Get Directions</a></p>
+
+<h3>Book Our Services</h3>
+<form onsubmit="sendToWhatsApp(); return false;">
+<input id="name" placeholder="Your Name" required="" type="text"/><br/><br/>
+<input id="event" placeholder="Event Type" required="" type="text"/><br/><br/>
+<input id="date" required="" type="date"/><br/><br/>
+<textarea id="message" placeholder="Additional Details" required=""></textarea><br/><br/>
+<button type="submit">Send Booking Request</button>
+</form>
+<script>
+    function sendToWhatsApp() {
+        var name = document.getElementById("name").value;
+        var event = document.getElementById("event").value;
+        var date = document.getElementById("date").value;
+        var message = document.getElementById("message").value;
+        var url = "https://wa.me/916362640092?text=" 
+            + "Name: " + name + "%0A"
+            + "Event: " + event + "%0A"
+            + "Date: " + date + "%0A"
+            + "Details: " + message;
+        window.open(url, '_blank').focus();
+    }
+    </script>
+</section>
+<footer>
+        📞 6362640092 | 📍 Near Canara Bank, Anemahal, Sakaleshpura - 573134
+    </footer>
+
+<a class="whatsapp-float" href="https://wa.me/916362640092" target="_blank">
+<img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"/>
+</a>
+<style>
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+.whatsapp-float img {
+    width: 40px;
+    margin-top: 10px;
+}
+</style>
+</body>
+</html>
